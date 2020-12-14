@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">FafEat</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="motto">First Arrive, First Eat</string>
+    <string name="login">Login</string>
+    <string name="register">Registrati</string>
+    <string name="enter_email">Email</string>
+    <string name="enter_password">Password</string>
+    <string name="remember_me">Ricordami</string>
+    <string name="forget_password">Password dimenticata?</string>
+    <string name="create_account">Crea Acccount</string>
+
+</resources>
