@@ -29,5 +29,15 @@ public class FullscreenActivity extends AppCompatActivity {
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation( FullscreenActivity.this, pairs);
         startActivity(intent, options.toBundle());
     }
+    public void callChooseutScreen(View view){
+
+        Intent intent = new Intent(getApplicationContext(),Chooseut.class);
+
+        Pair[] pairs = new Pair[1];
+        pairs[0] = new Pair<View, String>(findViewById(R.id.signup_btn), "transition_login");
+
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation( FullscreenActivity.this, pairs);
+        startActivity(intent, options.toBundle());
+    }
 
 }

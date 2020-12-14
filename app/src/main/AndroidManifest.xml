@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FafEat">
-        <activity android:name=".LoginSignup.Login"></activity>
+        <activity android:name=".LoginSignup.SignUpCust3"></activity>
+        <activity android:name=".LoginSignup.Signupcust2" />
+        <activity android:name=".LoginSignup.SignupCust" />
+        <activity android:name=".LoginSignup.Chooseut" />
+        <activity android:name=".LoginSignup.Login" />
         <activity
             android:name=".LoginSignup.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

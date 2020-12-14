@@ -10,6 +10,8 @@
     <string name="enter_password">Password</string>
     <string name="remember_me">Ricordami</string>
     <string name="forget_password">Password dimenticata?</string>
-    <string name="create_account">Crea Acccount</string>
-
+    <string name="create_account">Crea Account</string>
+    <string name="chooseut">Come vuoi registrati?</string>
+    <string name="enter_full_name">Nome completo</string>
+    <string name="enter_phone_number">Cellulare</string>
 </resources>
