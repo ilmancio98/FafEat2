@@ -14,4 +14,9 @@
     <string name="chooseut">Come vuoi registrati?</string>
     <string name="enter_full_name">Nome completo</string>
     <string name="enter_phone_number">Cellulare</string>
+    <string name="verify_code">Verifica</string>
+
+    <string name="otp_code_text">Code</string>
+    <string name="otp_verification_text">Verification</string>
+    <string name="otp_description_text">Immetti codice di verifica</string>
 </resources>
