@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/yellow"
     tools:context=".LoginSignup.Chooseut"
     android:transitionName="transition_login">
 
@@ -23,10 +23,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/amarante"
+            android:fontFamily="@font/muli_black"
             android:text="@string/chooseut"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="36sp" />
 
         <LinearLayout
