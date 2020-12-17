@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FafEat">
-        <activity android:name=".LoginSignup.VerificationOtp"></activity>
+        <activity android:name=".LoginSignup.ForgetPasswordSuccessMassage"></activity>
+        <activity android:name=".LoginSignup.SetNewPassword" />
+        <activity android:name=".LoginSignup.Make_selection" />
+        <activity android:name=".LoginSignup.ForgetPassword" />
+        <activity android:name=".LoginSignup.VerificationOtp" />
         <activity android:name=".LoginSignup.SignUpCust3" />
         <activity android:name=".LoginSignup.Signupcust2" />
         <activity android:name=".LoginSignup.SignupCust" />

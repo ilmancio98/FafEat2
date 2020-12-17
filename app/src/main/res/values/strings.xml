@@ -19,4 +19,8 @@
     <string name="otp_code_text">Code</string>
     <string name="otp_verification_text">Verification</string>
     <string name="otp_description_text">Immetti codice di verifica</string>
+    <string name="forget_password_detail">Immetti la mail di registrazione per resettare la tua password</string>
+    <string name="make_selection_detail">Scegli quale metodo usare per resettare la tua password</string>
+    <string name="make_selection">Scegli il metodo </string>
+    <string name="via_sms">Via SMS</string>
 </resources>
