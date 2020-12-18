@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFD600"
     android:padding="30dp"
-    android:transitionName="transition_login"
+    android:transitionName="transition_login, back_login"
     tools:context=".LoginSignup.Login">
 
     <LinearLayout

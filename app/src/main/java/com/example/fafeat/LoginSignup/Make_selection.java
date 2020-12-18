@@ -18,12 +18,12 @@ public class Make_selection extends AppCompatActivity {
         setContentView(R.layout.activity_make_selection);
     }
 
-    public void call_OTP_verification(View view){
+    public void call_set_new_password(View view){
 
-        Intent intent = new Intent(getApplicationContext(),VerificationOtp.class);
+        Intent intent = new Intent(getApplicationContext(),SetNewPassword.class);
 
         Pair[] pairs = new Pair[1];
-        pairs[0] = new Pair<View, String>(findViewById(R.id.mobile_btn), "forget_transition");
+        pairs[0] = new Pair<View, String>(findViewById(R.id.mobile_btn), "new_pass_transition");
 
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation( Make_selection.this, pairs);
         startActivity(intent, options.toBundle());

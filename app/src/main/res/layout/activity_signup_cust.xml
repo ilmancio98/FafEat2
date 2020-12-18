@@ -41,9 +41,12 @@
             android:layout_marginTop="40dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_full_name"
+                app:startIconDrawable="@drawable/pen_icon"
+                app:startIconTint="@color/black"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:hintTextColor="@color/black"
                 android:textColorHint="@color/black"
@@ -51,7 +54,8 @@
                 app:endIconTint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
                 app:boxStrokeColor="@color/black"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -63,9 +67,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_email"
+                app:startIconDrawable="@drawable/icon_email"
+                app:startIconTint="@color/black"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:inputType="textEmailAddress"
                 app:hintTextColor="@color/black"
@@ -88,11 +95,14 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:inputType="textPassword"
                 android:hint="@string/enter_password"
+                app:startIconDrawable="@drawable/password"
+                app:startIconTint="@color/black"
                 app:hintTextColor="@color/black"
                 android:textColorHint="@color/black"
                 app:endIconMode="password_toggle"

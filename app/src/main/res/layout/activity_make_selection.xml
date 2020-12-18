@@ -77,8 +77,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#00000000"
-                android:transitionName="OTP_screen"
-                android:onClick="call_OTP_verification"/>
+                android:transitionName="new_pass_transition"
+                android:onClick="call_set_new_password"/>
         </RelativeLayout>
 
         <RelativeLayout
