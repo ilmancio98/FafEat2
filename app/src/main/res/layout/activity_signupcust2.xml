@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginSignup.Signupcust2"
-    android:background="@color/yellow"
-    android:padding="40dp">
+    android:background="#FFD600"
+    android:padding="40dp"
+    tools:context=".LoginSignup.Signupcust2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,86 +19,82 @@
             android:layout_height="50dp"
             android:padding="5dp"
             android:src="@drawable/general_back_icon"
-            android:transitionName="transition_back_arrow_btn"/>
+            android:transitionName="transition_back_arrow_btn" />
 
         <TextView
             android:id="@+id/signup_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/muli_black"
             android:text="@string/create_account"
+            android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="40sp"
-            android:fontFamily="@font/muli_black"
-            android:textAllCaps="true"
-            android:layout_marginTop="20dp"
-            android:transitionName="transition_title_text"/>
+            android:transitionName="transition_title_text" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Sesso"
-             android:textColor="@color/black"
-             android:textSize="25dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sesso"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Uomo"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Donna"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
                 <RadioButton
                     android:id="@+id/radioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Altro"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
             </RadioGroup>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/black"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Seleziona la tua età"
                 android:textColor="@color/black"
-                android:textSize="25dp"/>
+                android:textSize="25dp" />
 
             <DatePicker
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:datePickerMode="spinner"
                 android:calendarViewShown="false"
-                android:spinnersShown="true"/>
-
-
-
-
+                android:datePickerMode="spinner"
+                android:spinnersShown="true" />
 
 
         </LinearLayout>
@@ -107,11 +103,11 @@
             android:id="@+id/signup_next_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Avanti"
+            android:layout_marginTop="20dp"
             android:background="@color/black"
             android:onClick="callNextSignup2Screen"
-            android:layout_marginTop="20dp"
-            android:transitionName="transition_next_btn"/>
+            android:text="Avanti"
+            android:transitionName="transition_next_btn" />
 
     </LinearLayout>
 
