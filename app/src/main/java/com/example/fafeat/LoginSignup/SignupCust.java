@@ -60,8 +60,8 @@ public class SignupCust extends AppCompatActivity {
     }
 
     /*
-    Validation Function
-     */
+    Validation Function*/
+
 
     private boolean validateFullName() {
         String val = fullName.getEditText().getText().toString().trim();

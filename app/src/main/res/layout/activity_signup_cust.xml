@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFD600"
     android:padding="40dp"
-    android:transitionName="transition_choose"
+    android:transitionName="transition_customer"
     tools:context=".LoginSignup.SignupCust">
 
     <LinearLayout
@@ -129,7 +129,7 @@
             android:background="@color/white"
             android:onClick="callNextSignupScreen"
             android:text="Avanti"
-            android:transitionName="transition_next_btn" />
+            android:transitionName="transition_next_btn"/>
 
     </LinearLayout>
 

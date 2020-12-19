@@ -18,10 +18,12 @@ public class SignUpCust3 extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up_cust3);
     }
 
-    public void callNextVerificationScreen(View view) {
+    public void callOtpScreen(View view) {
         Intent intent = new Intent(getApplicationContext(), VerificationOtp.class);
 
-        Pair[] pairs = new Pair[0];
+        Pair[] pairs = new Pair[1];
+        pairs[0] = new Pair<View, String>(findViewById(R.id.signup_next), "OTP_screen");
+
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SignUpCust3.this, pairs);
         startActivity(intent, options.toBundle());
     }

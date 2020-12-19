@@ -90,12 +90,15 @@
                     android:textColor="@color/black" />
 
                 <Button
+                    android:id="@+id/forget_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:background="#00000000"
                     android:text="@string/forget_password"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:transitionName="forget_transition"
+                    android:onClick="callForgetPassword"/>
 
             </RelativeLayout>
 

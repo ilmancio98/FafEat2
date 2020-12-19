@@ -24,7 +24,7 @@ public class Chooseut extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),SignupCust.class);
 
         Pair[] pairs = new Pair[1];
-        pairs[0] = new Pair<View, String>(findViewById(R.id.client_btn), "transition_choose");
+        pairs[0] = new Pair<View, String>(findViewById(R.id.customer_btn), "transition_customer");
 
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation( Chooseut.this, pairs);
         startActivity(intent, options.toBundle());

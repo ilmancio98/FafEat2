@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginSignup.SignUpCust3"
-    android:background="@color/yellow"
-    android:padding="40dp">
+    android:background="#FFD600"
+    android:padding="40dp"
+    android:transitionName="transition_next"
+    tools:context=".LoginSignup.SignUpCust3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,53 +20,52 @@
             android:layout_height="50dp"
             android:padding="5dp"
             android:src="@drawable/general_back_icon"
-            android:transitionName="transition_back_arrow_btn"/>
+            android:transitionName="transition_back_arrow_btn" />
 
         <TextView
             android:id="@+id/signup_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/muli_black"
             android:text="@string/create_account"
+            android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="40sp"
-            android:fontFamily="@font/muli_black"
-            android:textAllCaps="true"
-            android:layout_marginTop="20dp"
-            android:transitionName="transition_title_text"/>
+            android:transitionName="transition_title_text" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
 
             <com.hbb20.CountryCodePicker
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/black_border"
                 app:ccp_autoDetectCountry="true"
                 app:ccp_showFlag="true"
-                app:ccp_showNameCode="true"
                 app:ccp_showFullName="true"
-                android:background="@drawable/black_border"/>
+                app:ccp_showNameCode="true" />
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:hint="@string/enter_phone_number"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:inputType="phone"
-                app:hintTextColor="@color/black"
                 android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/white"
-                app:boxStrokeWidthFocused="2dp"
-                app:boxStrokeColor="@color/white"
-                android:layout_marginTop="30dp">
+                app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
+                    android:layout_height="match_parent">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -74,14 +74,14 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/signup_next_button"
+            android:id="@+id/signup_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Avanti"
-            android:background="@color/white"
-            android:onClick="callNextVerificationScreen"
             android:layout_marginTop="20dp"
-            android:transitionName="transition_next_btn"/>
+            android:background="@color/black"
+            android:onClick="callOtpScreen"
+            android:text="Avanti"
+            android:transitionName="OTP_screen"/>
 
     </LinearLayout>
 

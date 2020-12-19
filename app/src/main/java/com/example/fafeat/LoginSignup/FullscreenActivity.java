@@ -34,7 +34,7 @@ public class FullscreenActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),Chooseut.class);
 
         Pair[] pairs = new Pair[1];
-        pairs[0] = new Pair<View, String>(findViewById(R.id.signup_btn), "transition_login");
+        pairs[0] = new Pair<View, String>(findViewById(R.id.signup_btn), "transition_choose");
 
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation( FullscreenActivity.this, pairs);
         startActivity(intent, options.toBundle());
