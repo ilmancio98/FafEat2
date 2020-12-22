@@ -103,14 +103,14 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/signup_next_button"
+            android:id="@+id/signup_login_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@color/black"
-            android:onClick="callNextSignup3Screen"
-            android:text="Avanti"
-            android:transitionName="transition_next"/>
+            android:onClick="callLogin"
+            android:text="Registrati"
+            android:transitionName="transition_login"/>
 
     </LinearLayout>
 

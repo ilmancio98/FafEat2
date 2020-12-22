@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.example.fafeat.R;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.Objects;
+
 public class SignupCust extends AppCompatActivity {
 
     //Variables
@@ -30,7 +32,7 @@ public class SignupCust extends AppCompatActivity {
         setContentView(R.layout.activity_signup_cust);
 
         //Hooks for animation
-        backbtn = findViewById(R.id.signup_cust__back_button);
+        backbtn = findViewById(R.id.signup_back_button);
         next = findViewById(R.id.signup_next_button);
         titleText = findViewById(R.id.signup_title_text);
 
@@ -38,6 +40,7 @@ public class SignupCust extends AppCompatActivity {
         fullName = findViewById(R.id.signup_fullname);
         email = findViewById(R.id.signup_email);
         password = findViewById(R.id.signup_password);
+
 
     }
 
@@ -48,7 +51,18 @@ public class SignupCust extends AppCompatActivity {
             return;
         }
 
+        String _name = Objects.requireNonNull(fullName.getEditText()).getText().toString();
+        String _email = Objects.requireNonNull(email.getEditText()).getText().toString();
+        String _password = Objects.requireNonNull(password.getEditText()).getText().toString();
+
         Intent intent = new Intent(getApplicationContext(), Signupcust2.class);
+
+        intent.putExtra("name", _name);
+        intent.putExtra("email_", _email);
+        intent.putExtra("password_", _password);
+
+
+
 
         Pair[] pairs = new Pair[3];
         pairs[0] = new Pair<View, String>(backbtn, "transition_back_arrow_btn");
@@ -64,7 +78,7 @@ public class SignupCust extends AppCompatActivity {
 
 
     private boolean validateFullName() {
-        String val = fullName.getEditText().getText().toString().trim();
+        String val = Objects.requireNonNull(fullName.getEditText()).getText().toString().trim();
 
         if (val.isEmpty()) {
             fullName.setError("Il campo non può essere vuoto");
@@ -77,7 +91,7 @@ public class SignupCust extends AppCompatActivity {
     }
 
     private boolean validateEmail() {
-        String val = email.getEditText().getText().toString().trim();
+        String val = Objects.requireNonNull(email.getEditText()).getText().toString().trim();
         String checkEmail = "[a-zA-Z0-9._-]+@[a-z]+.+[a-z]+";
 
         if (val.isEmpty()) {
@@ -94,13 +108,25 @@ public class SignupCust extends AppCompatActivity {
     }
 
     private boolean validatePassword() {
-        String val = password.getEditText().getText().toString().trim();
-
+        String val = Objects.requireNonNull(password.getEditText()).getText().toString().trim();
+        String checkPassword = "^" +
+                //"(?=.*[0-9])" +         //at least 1 digit
+                //"(?=.*[a-z])" +         //at least 1 lower case letter
+                //"(?=.*[A-Z])" +         //at least 1 upper case letter
+                "(?=.*[a-zA-Z])" +      //any letter
+                //"(?=.*[@#$%^&+=])" +    //at least 1 special character
+                "(?=\\S+$)" +           //no white spaces
+                ".{4,}" +               //at least 4 characters
+                "$";
 
         if (val.isEmpty()) {
             password.setError("Il campo non può essere vuoto");
             return false;
-        }else {
+
+        }else if (!val.matches(checkPassword)) {
+            password.setError("Password should contain 4 characters!");
+            return false;
+        } else {
             password.setError(null);
             password.setErrorEnabled(false);
             return true;

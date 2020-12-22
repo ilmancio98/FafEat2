@@ -21,8 +21,9 @@ import java.util.Calendar;
 
 public class Signupcust2 extends AppCompatActivity {
 
+
     ImageView backbtn;
-    Button next;
+    Button login;
     TextView titleText;
     RadioGroup radioGroup;
     RadioButton selectedGender;
@@ -34,34 +35,48 @@ public class Signupcust2 extends AppCompatActivity {
         setContentView(R.layout.activity_signupcust2);
 
         backbtn = findViewById(R.id.signup_cust__back_button);
-        next = findViewById(R.id.signup_next_button);
+        login = findViewById(R.id.signup_login_btn);
         titleText = findViewById(R.id.signup_title_text);
         radioGroup = findViewById(R.id.radio_group);
         datePicker = findViewById(R.id.age_picker);
+
+
+
+
+
     }
 
-    public void callNextSignup3Screen(View view) {
+    public void callLogin(View view) {
 
         if (!validateGender() | !validateAge()){
             return;
         }
 
+
         selectedGender = findViewById(radioGroup.getCheckedRadioButtonId());
-        String gender = selectedGender.getText().toString();
+        String _gender = selectedGender.getText().toString();
 
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth();
         int year = datePicker.getYear();
 
 
-        String date = day+"/"+month+"/"+year;
+        String _date = day+"/"+month+"/"+year;
 
-        Intent intent = new Intent(getApplicationContext(), SignUpCust3.class);
+        String _name = getIntent().getStringExtra("name");
+        String _email = getIntent().getStringExtra("email_");
+        String _password = getIntent().getStringExtra("password_");
 
-        Pair[] pairs = new Pair[3];
-        pairs[0] = new Pair<View, String>(backbtn, "transition_back_arrow");
-        pairs[1] = new Pair<View, String>(next, "transition_next");
-        pairs[2] = new Pair<View, String>(titleText, "transition_title");
+        Intent intent = new Intent(getApplicationContext(), Login.class);
+
+        intent.putExtra("name", _name);
+        intent.putExtra("email_", _email);
+        intent.putExtra("password_", _password);
+        intent.putExtra("gender_", _gender);
+        intent.putExtra("date_", _date);
+
+        Pair[] pairs = new Pair[1];
+        pairs[0] = new Pair<View, String>(login, "transition_login");
 
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Signupcust2.this, pairs);
         startActivity(intent, options.toBundle());
